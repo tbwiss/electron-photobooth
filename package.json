@@ -1,5 +1,6 @@
 {
   "name": "electron-photobooth",
+  "productName": "Photobooth",
   "version": "1.0.0",
   "description": "A simple photobooth app",
   "main": "src/main.js",

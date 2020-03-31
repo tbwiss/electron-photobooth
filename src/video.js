@@ -2,10 +2,10 @@ const constraints = {
   audio: false,
   video: {
     mandatory: {
-      minWidth: 453,
-      minHeight: 240,
-      maxWidth: 453,
-      maxHeight: 240,
+      minWidth: 853,
+      minHeight: 480,
+      maxWidth: 853,
+      maxHeight: 480,
     }
   }
 };
@@ -29,5 +29,9 @@ exports.init = (navigator, videoEl) => {
 
 exports.captureBytes = (videoEl, ctx, canvasEl) => {
   ctx.drawImage(videoEl, 0, 0);
+  return canvasEl.toDataURL('image/png');
+}
+
+exports.captureBytesFromLiveCanvas = (canvasEl) => {
   return canvasEl.toDataURL('image/png');
 }
